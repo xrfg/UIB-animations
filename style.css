@@ -48,9 +48,9 @@ body::after {
     N = name
     D = duration
     T = timing-function
-    D = direction
+    D = delay
     I = iteration-count
-    D = 
+    D = direction
 
   */
 
@@ -81,8 +81,8 @@ body::after {
 .circle:hover {
   background-color: plum;
   transform: rotate(360deg);
-} */
-
+} 
+*/
 @keyframes kittyscoot {
   from {
     transform: translateX(-200px);
