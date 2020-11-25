@@ -1,0 +1,115 @@
+body {
+  background-color: lightblue;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  background: center / cover no-repeat url(/img/659142.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.cat {
+  /* transform: translate(400px, 200px); */
+  /* transform: scale(1.5); */
+  /* transform: rotatez(120deg) translatex(125px) scale(1.25); */
+  /* transform: skew(4deg, 10deg); */
+}
+
+.cat-1 {
+  animation: kittyscoot;
+  animation-duration: 7s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /* position: absolute; */
+}
+
+.cat-2 {
+  animation: kittyscoot 6s both infinite linear;
+  animation-direction: reverse;
+}
+
+.planet {
+  position: absolute;
+}
+
+.planet-1 {
+  width: 200px;
+  top: 100px;
+  opacity: 0.5;
+  /* animation = N D T D I D Acronym 
+    N = name
+    D = duration
+    T = timing-function
+    D = direction
+    I = iteration-count
+    D = 
+
+  */
+
+  animation: orbit 80s linear infinite reverse;
+}
+
+.planet-2 {
+  width: 250px;
+  top: 0;
+
+  animation: orbit 40s linear infinite reverse, bounce 5s 15s ease;
+}
+
+/* .circle {
+  background-color: pink;
+  width: 100px;
+  padding: 30px 0;
+  margin: 60px auto;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+
+   transition: background 2s, transform 0.3s 1s ease-in;
+
+   transition: all 2s cubic-bezier(); 
+
+
+.circle:hover {
+  background-color: plum;
+  transform: rotate(360deg);
+} */
+
+@keyframes kittyscoot {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(2000px);
+  }
+}
+
+@keyframes orbit {
+  from {
+    left: -300px;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: -40px;
+  }
+
+  50% {
+    top: -100px;
+  }
+  100% {
+  }
+}
